@@ -10,7 +10,7 @@ const csrfProtection = csrf();
 router.use(csrfProtection);
 
 
-router.get('/profile', notLoggedIn, async (req, res) => {
+router.get('/profile', isLoggedIn, async (req, res) => {
     Order.find({user:req.user},function (err,orders) {
         if (err){
             return res.write("Error!")
@@ -51,7 +51,7 @@ router.post('/signup', passport.authenticate('local.signup', {
     }
 );
 // sign in
-router.get('/signin', isLoggedIn, async (req, res) => {
+router.get('/signin', notLoggedIn, async (req, res) => {
     const messages = req.flash('error');
     res.render('user/signin', {
         csrfToken: req.csrfToken,
@@ -84,15 +84,22 @@ module.exports = router;
 
 
 // authentication middleware functions
-function notLoggedIn(req, res, next) {
+// and the user roles ==> look the comments below
+function isLoggedIn(req, res, next) {
+    // const buyerUrls = ['/profile', '/shopping-cart']
+    // console.log(req.url)
     if (req.isAuthenticated()) {
+        // console.log(buyerUrls.includes(req.url))
+        // if(req.user.role === 'buyer' && buyerUrls.includes(req.url)){
+        //     return res.send('Accessing this page not allowed!')
+        // }
         next();
     } else {
         res.redirect("/user/signin");
     }
 }
 
-function isLoggedIn(req, res, next) {
+function notLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
         res.redirect("/");
     } else {

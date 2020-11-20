@@ -55,7 +55,7 @@ router.get('/shopping-cart', async (req, res) => {
     }
 })
 
-router.get('/checkout',notLoggedIn, async (req, res) => {
+router.get('/checkout',isLoggedIn, async (req, res) => {
     if (!req.session.cart) {
         return res.redirect('/shopping-cart')
     }
@@ -105,7 +105,7 @@ router.post('/checkout', async (req, res) => {
 })
 module.exports = router;
 
-function notLoggedIn(req,res,next){
+function isLoggedIn(req,res,next){
     if(req.isAuthenticated()){
         next();
     } else{
