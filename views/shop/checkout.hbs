@@ -1,0 +1,50 @@
+<div class="row my-5">
+    <div class="col-6 offset-3">
+        <h2>Checkout</h2>
+        <h6>Your total price: ${{totalPrice}}</h6>
+        <br>
+        <div id="charge-error" class="{{#if noErrors}}d-none{{/if}} alert alert-danger ">
+            {{errMessage}}
+        </div>
+        <form action="/checkout" method="post" id="checkout-form">
+            <div class="form-group">
+                <label>Name</label>
+                <input name="name" type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+                <label>Address</label>
+                <input name="address" type="text" class="form-control" id="address">
+            </div>
+            <div class="form-group">
+                <label>Card Holder Name</label>
+                <input name="holderName" type="text" class="form-control" id="holderName">
+            </div>
+            <div class="form-group">
+                <label>Credit Card Number</label>
+                <input name="card-number" type="number" class="form-control" id="card-number">
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>Ex Month</label>
+                        <input name="card-expiry-month" type="number" class="form-control" id="card-expiry-month">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label>Ex Your</label>
+                        <input name="card-expiry-year" type="number" class="form-control" id="card-expiry-year">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>CVC</label>
+                <input name="card-cvc" type="number" class="form-control" id="card-cvc">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+</div>
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript" src="javascripts/checkout.js"></script>

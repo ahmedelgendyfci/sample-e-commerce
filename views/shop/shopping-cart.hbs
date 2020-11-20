@@ -1,0 +1,42 @@
+{{# if products}}
+    <div class="row py-4">
+        {{#each products}}
+            <div class="col col-6 offset-3 border rounded my-1 py-1 px-3">
+                <div class="row">
+                    <div class="col-10 pb-0">
+                        <label>{{this.item.title}}</label>
+                        <label class=" alert-success rounded-circle px-2 mx-2">{{this.qty}}</label>
+                        <div class="btn-group">
+                            <button class="btn btn-danger btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                Action
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/reduceOne/{{this.item._id}}">Reduce by 1</a>
+                                <a class="dropdown-item" href="/removeItem/{{this.item._id}}">Remove All</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 text-right">
+                        $ {{this.price}}
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+        <div class="col-6 offset-3 p-0 mt-4">
+            Total Price: <span>$ {{totalPrice}}</span>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-6 offset-3 p-0">
+            <a href="/checkout" class="btn btn-success" >Checkout</a>
+        </div>
+    </div>
+{{else}}
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h2>No items in cart</h2>
+        </div>
+    </div>
+{{/if}}
