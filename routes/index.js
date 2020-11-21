@@ -1,10 +1,19 @@
 const express = require('express');
 const router = express.Router();
+const nodemailer = require('nodemailer');
 
 
 const Cart = require('../models/cart')
 const Product = require('../models/product')
 const Order = require('../models/order')
+
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth:{
+        user:'95ahmedelgendy@gmail.com',
+        pass:'ahmed01123488897...'
+    }
+})
 
 /* GET home page. */
 router.get('/', async (req, res) => {
@@ -93,7 +102,20 @@ router.post('/checkout', async (req, res) => {
             name: req.body.name,
             paymentId: charge.id
         })
-
+        const  mailOptions = {
+            from:'Shopping Cart Website',
+            to: req.user.email,
+            subject: 'Payment Confirmation',
+            text:'Checkout using stripe done Successfully with payment id: '+charge.id
+        }
+        transporter.sendMail(mailOptions,function (err,data) {
+            if(err){
+                console.log(err)
+                console.log('Error Occurs')
+            }else {
+                console.log('payment e-mail sent successfully!')
+            }
+        })
         order.save(function (err,result){
             req.flash('success', 'Products bought successfully!');
             req.session.cart = null;

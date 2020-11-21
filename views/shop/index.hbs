@@ -1,7 +1,11 @@
+
 <div class="row">
     <div class="col-6 offset-3">
-        <div class="{{#if noMessages}}d-none{{/if}} alert alert-success ">
-            {{successMsg}}
+        <div class="{{#if noMessages}}d-none{{/if}} alert alert-success alert-dismissible fade show" role="alert">
+            {{successMsg}}!
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
     </div>
 </div>
