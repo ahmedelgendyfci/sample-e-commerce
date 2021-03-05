@@ -55,8 +55,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(function (req, res, next) {
-    res.locals.signin = req.isAuthenticated();
-    res.locals.session = req.session;
+    res.locals.signin = req.isAuthenticated(); // to check logged in or not
+    res.locals.session = req.session; // to store cart
     next()
 })
 

@@ -1,0 +1,22 @@
+<div class="w-50 mx-auto">
+    <form method="POST" action="/updateProduct" >
+        <input type="hidden" name="_id" value="{{product._id}}">
+        <div class="form-group">
+            <label for="title">Title *</label>
+            <input type="text" name="title" class="form-control" id="title" placeholder="Product Title" value="{{product.title}}">
+        </div>
+        <div class="form-group">
+            <label for="description">description *</label>
+            <input type="text" name="description" class="form-control" id="description" placeholder="Product Title" value="{{product.description}}">
+        </div>
+        <div class="form-group">
+            <label for="price">Price *</label>
+            <input type="number" name="price" class="form-control" id="price" placeholder="$ 50" value="{{product.price}}">
+        </div>
+        <div class="form-group">
+            <label for="quantity">Product Quantity *</label>
+            <input type="number" name="qty" class="form-control" id="qty" placeholder="10" value="{{product.qty}}">
+        </div>
+        <button type="submit" class="btn btn-danger">Submit</button>
+    </form>
+</div>

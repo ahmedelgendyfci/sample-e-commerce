@@ -28,7 +28,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -38,6 +38,9 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
+    <configuration name="mailSender.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/mailSender.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
     <configuration name="product-seeder.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/seed/product-seeder.js" working-dir="$PROJECT_DIR$/seed">
       <method v="2" />
     </configuration>
@@ -51,9 +54,21 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.start" />
+        <item itemvalue="Node.js.mailSender.js" />
         <item itemvalue="Node.js.product-seeder.js" />
       </list>
     </recent_temporary>
@@ -81,7 +96,25 @@
       <workItem from="1605551380058" duration="12844000" />
       <workItem from="1605686095977" duration="16850000" />
       <workItem from="1605741532685" duration="5723000" />
-      <workItem from="1605784097764" duration="4936000" />
+      <workItem from="1605784097764" duration="6290000" />
+      <workItem from="1605897151159" duration="5719000" />
+      <workItem from="1605952098929" duration="4948000" />
+      <workItem from="1605985130452" duration="6895000" />
+      <workItem from="1606307467389" duration="27707000" />
+      <workItem from="1606649976161" duration="1903000" />
+      <workItem from="1608310684937" duration="589000" />
+      <workItem from="1608403432706" duration="374000" />
+      <workItem from="1609712810928" duration="591000" />
+      <workItem from="1611307868709" duration="2229000" />
+      <workItem from="1611655377488" duration="14858000" />
+      <workItem from="1612006761321" duration="6758000" />
+      <workItem from="1612203696785" duration="584000" />
+      <workItem from="1612208164640" duration="5448000" />
+      <workItem from="1612530103636" duration="1865000" />
+      <workItem from="1612713636483" duration="12955000" />
+      <workItem from="1612890740185" duration="2242000" />
+      <workItem from="1612972307491" duration="14351000" />
+      <workItem from="1613166633920" duration="13808000" />
     </task>
     <servers />
   </component>
@@ -89,46 +122,46 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="437" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606338714943">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="437" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1606338714943" />
     <state x="413" y="114" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604680860323">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="114" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1604680860323" />
-    <state x="402" y="127" key="FileChooserDialogImpl" timestamp="1605741076181">
+    <state x="402" y="127" key="FileChooserDialogImpl" timestamp="1606038630330">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="402" y="127" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1605741076181" />
-    <state width="1344" height="248" key="GridCell.Tab.0.bottom" timestamp="1605865244368">
+    <state x="402" y="127" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1606038630330" />
+    <state width="1344" height="172" key="GridCell.Tab.0.bottom" timestamp="1613392180918">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1344" height="248" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1605865244368" />
-    <state width="1344" height="176" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1604493549681" />
-    <state width="1344" height="248" key="GridCell.Tab.0.center" timestamp="1605865244368">
+    <state width="1344" height="172" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1613392180918" />
+    <state width="1344" height="172" key="GridCell.Tab.0.center" timestamp="1613392180917">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1344" height="248" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1605865244368" />
-    <state width="1344" height="176" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1604493549681" />
-    <state width="1344" height="248" key="GridCell.Tab.0.left" timestamp="1605865244367">
+    <state width="1344" height="172" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1613392180917" />
+    <state width="1344" height="172" key="GridCell.Tab.0.left" timestamp="1613392180917">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1344" height="248" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1605865244367" />
-    <state width="1344" height="176" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1604493549681" />
-    <state width="1344" height="248" key="GridCell.Tab.0.right" timestamp="1605865244368">
+    <state width="1344" height="172" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1613392180917" />
+    <state width="1344" height="172" key="GridCell.Tab.0.right" timestamp="1613392180918">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1344" height="248" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1605865244368" />
-    <state width="1344" height="176" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1604493549681" />
-    <state x="246" y="0" key="SettingsEditor" timestamp="1605744472891">
+    <state width="1344" height="172" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1613392180918" />
+    <state x="254" y="0" key="SettingsEditor" timestamp="1613147996245">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="246" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1605744472891" />
+    <state x="254" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1613147996245" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1605034515282">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="600" height="428" key="javadoc.popup/0.0.1366.738@0.0.1366.738" timestamp="1605034515282" />
-    <state x="339" y="159" key="run.anything.popup" timestamp="1605740763167">
+    <state x="339" y="159" key="run.anything.popup" timestamp="1606423585508">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="339" y="159" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1605740763167" />
+    <state x="339" y="159" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1606423585508" />
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1604860819365">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

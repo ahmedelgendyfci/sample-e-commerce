@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="product-intro">
+        <div class="pd d-flex align-items-end justify-content-center">
+            <div class="mb-5 text-center">
+                <h2><strong>Product Details</strong></h2>
+                <a href="#">Home <i class="fas fa-greater-than"></i></a>
+                <a href="#">product <i class="fas fa-greater-than"></i></a>
+                <a href="#">product-datails <i class="fas fa-greater-than"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="product-details my-5">
+        <div class="row">
+            <div class="col-3">
+                <img src="../images/{{product.imagePath}}" class="product-image" alt="">
+            </div>
+            <div class="col-9">
+                <div class="card-body px-2 pt-2">
+                    <h5 class="card-title">{{product.title}}</h5>
+                    <p class="card-text">{{product.description}}</p>
+                    {{#if qty}}
+                        <p>Quantity: <strong>{{product.qty}}</strong> item</p>
+                    {{else}}
+                        <p>Quantity: <strong>Out Of Stock</strong></p>
+                    {{/if}}
+
+                    <p><strong>$ {{product.price}}</strong></p>
+                    <a class="btn btn-sm btn-success ml-auto {{#if qty}}{{else}}disabled{{/if}}"
+                       href="/add-to-cart/{{product._id}}">Add To Shopping Cart</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="related-products">
+        <div class="row">
+            {{#each products}}
+                <div class="col-2 text-center d-flex">
+                    <div class=" border align-self-stretch">
+                        <div>
+                            <img src="../images/{{this.imagePath}}" class="img-fluid" alt="">
+                        </div>
+                        <h3>{{this.title}}</h3>
+                        <p>price: {{this.price}}</p>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+    {{>footer}}
+</div>
+

@@ -1,0 +1,26 @@
+<div class="w-50 mx-auto">
+    <form method="POST" action="/upload" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="productImage">Product Image *</label>
+            <input type="file" name="productImage" class="form-control-file" id="productImage" value="" required>
+        </div>
+        <div class="form-group">
+            <label for="title">Title *</label>
+            <input type="text" name="title" class="form-control" id="title" placeholder="Product Title" value="" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Content *</label>
+            <textarea class="form-control" name="description" id="description" rows="3"
+                      placeholder="Product Description" value="" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="price">Price *</label>
+            <input type="number" name="price" class="form-control" id="price" placeholder="$ 50" value="" required>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Product Quantity *</label>
+            <input type="number" name="qty" class="form-control" id="qty" placeholder="10" value="" required>
+        </div>
+        <button type="submit" class="btn btn-danger">Submit</button>
+    </form>
+</div>
